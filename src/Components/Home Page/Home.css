@@ -7,11 +7,11 @@
   -ms-interpolation-mode: nearest-neighbor;
 }
 
-.para1-media-query{
-    display: none;
+.para1-media-query {
+  display: none;
 }
-.home-bottom-media{
-    display: none;
+.home-bottom-media {
+  display: none;
 }
 
 .contact-link {
@@ -53,7 +53,6 @@
   flex-direction: column;
   text-align: left;
 }
-
 
 .homepage-box-heading {
   font-size: 2.2rem;
@@ -155,14 +154,14 @@
     margin-bottom: 10%;
   }
   .homepage-bottom-container {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   .homepage-bottom-header {
-      text-align: center;
+    text-align: center;
     font-size: 3rem;
   }
   .homepage-bottom-text {
@@ -171,19 +170,19 @@
     margin: 0 0 5% 5%;
   }
   .bottom1 {
-      display: none;
+    display: none;
   }
-  .para1{
-      display: none;
+  .para1 {
+    display: none;
   }
-  .para1-media-query{
-      display: flex;
+  .para1-media-query {
+    display: flex;
   }
-  .home-bottom-media{
-      display: block;
-      text-align: justify;
-      font-size: 1rem;
-      margin: 0 2% 7% 5%;
-      white-space: pre-line;
+  .home-bottom-media {
+    display: block;
+    text-align: justify;
+    font-size: 1rem;
+    margin: 0 2% 7% 5%;
+    white-space: pre-line;
   }
 }

@@ -1,8 +1,8 @@
-import './App.css';
+import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Home from './Components/Home Page/Home';
-import Contact from './Components/Contact/Contact';
+import Home from "./Components/Home Page/Home";
+import Contact from "./Components/Contact/Contact";
 
 function App() {
   return (

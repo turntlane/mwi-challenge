@@ -13,25 +13,24 @@ let names2 = ["Matt Johnson", "Bart Paden", "Jordan Heigle", "Tyler Viles"];
 function Home() {
   const [list, setList] = useState([]);
   const [active, isActive] = useState(false);
-  const [boxHeading, setBoxHeading] = useState('')
-  const [boxHeading2, setBoxHeading2] = useState('')
-  const [boxHeading3, setBoxHeading3] = useState('')
-  const [boxpara, setBoxPara] = useState('')
-  const [boxpara2, setBoxPara2] = useState('')
-  const [boxpara3, setBoxPara3] = useState('')
-
+  const [boxHeading, setBoxHeading] = useState("");
+  const [boxHeading2, setBoxHeading2] = useState("");
+  const [boxHeading3, setBoxHeading3] = useState("");
+  const [boxpara, setBoxPara] = useState("");
+  const [boxpara2, setBoxPara2] = useState("");
+  const [boxpara3, setBoxPara3] = useState("");
 
   useEffect(() => {
-    axios.get(`https://api.mwi.dev/content/home`)
-    .then(res => {
-      setBoxHeading(res.data.data[0].title)
-      setBoxHeading2(res.data.data[1].title)
-      setBoxHeading3(res.data.data[2].title)
-      setBoxPara(res.data.data[0].content)
-      setBoxPara2(res.data.data[1].content)
-      setBoxPara3(res.data.data[2].content)
-    })
-  }, [])
+    axios.get(`http://localhost:5000/data`).then((res) => {
+      console.log(res.data);
+      setBoxHeading(res.data[0].header1);
+      setBoxHeading2(res.data[0].header2);
+      setBoxHeading3(res.data[0].header3);
+      setBoxPara(res.data[0].para1);
+      setBoxPara2(res.data[0].para2);
+      setBoxPara3(res.data[0].para3);
+    });
+  }, []);
 
   const newList = () => {
     isActive(true);
@@ -52,12 +51,8 @@ function Home() {
           <section className="homepage-box-1 homepage-box">
             <img className="box-img" src={talkie} alt="Midwestern Logo" />
             <h1 className="homepage-box-heading">{boxHeading}</h1>
-            <p className="para1 homepage-box-para">
-              {boxpara}
-            </p>
-            <p className="para1-media-query homepage-box-para">
-              {boxpara}
-            </p>
+            <p className="para1 homepage-box-para">{boxpara}</p>
+            <p className="para1-media-query homepage-box-para">{boxpara}</p>
             <button className="learn-more">Learn More</button>
           </section>
 
@@ -67,19 +62,17 @@ function Home() {
               src={rabbit}
               alt="Midwestern Logo"
             />
-            <h1 className="rabbit-heading homepage-box-heading">{boxHeading2}</h1>
-            <p className="rabbit-p homepage-box-para">
-              {boxpara2}
-            </p>
+            <h1 className="rabbit-heading homepage-box-heading">
+              {boxHeading2}
+            </h1>
+            <p className="rabbit-p homepage-box-para">{boxpara2}</p>
             <button className="learn-more">Learn More</button>
           </section>
 
           <section className="homepage-box-1 homepage-box">
             <img className="box-img" src={shield} alt="Midwestern Logo" />
             <h1 className="homepage-box-heading">{boxHeading3}</h1>
-            <p className="homepage-box-para">
-              {boxpara3}
-            </p>
+            <p className="homepage-box-para">{boxpara3}</p>
             <button className="learn-more">Learn More</button>
           </section>
         </div>
@@ -99,12 +92,22 @@ function Home() {
           <p className="home-bottom-media homepage-bottom-text">
             Remove the duplicates in 2 Javascript objects and output the list of
             distinct names in an unordered list when{" "}
-            <span onClick={newList} style={{ color: "#debf79" }}>this link</span> is clicked. If
-            the operation has been{"\n"}
+            <span onClick={newList} style={{ color: "#debf79" }}>
+              this link
+            </span>{" "}
+            is clicked. If the operation has been{"\n"}
             {"\n"}
             completed already notify the user that this has already been done.
           </p>
-          <ul>{active ? list.map((e) => <li className='home-names-list' key={e}>{e}</li>) : null}</ul>
+          <ul>
+            {active
+              ? list.map((e) => (
+                  <li className="home-names-list" key={e}>
+                    {e}
+                  </li>
+                ))
+              : null}
+          </ul>
         </section>
       </div>
     </div>
