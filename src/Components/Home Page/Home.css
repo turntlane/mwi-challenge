@@ -7,6 +7,13 @@
   -ms-interpolation-mode: nearest-neighbor;
 }
 
+.para1-media-query{
+    display: none;
+}
+.home-bottom-media{
+    display: none;
+}
+
 .contact-link {
   text-decoration: none;
   color: #debf79;
@@ -25,7 +32,7 @@
 }
 
 .home-content-container {
-  padding: 2% 8% 5% 8%;
+  padding: 5% 13% 5% 13%;
 }
 
 .header-container {
@@ -47,14 +54,11 @@
   text-align: left;
 }
 
-.homepage-box-2 {
-}
 
 .homepage-box-heading {
   font-size: 2.2rem;
   text-align: left;
   margin-right: 20%;
-  font-weight: bold;
 }
 
 .homepage-box-para {
@@ -135,6 +139,7 @@
   }
   .homepage-box-heading {
     margin-left: 7%;
+    margin-bottom: 2%;
   }
   .home-content-container {
     padding: 2% 2% 2% 2%;
@@ -145,11 +150,36 @@
   .learn-more {
     margin-bottom: 10%;
   }
+  .homepage-bottom-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  }
   .homepage-bottom-header {
+      text-align: center;
     font-size: 3rem;
   }
   .homepage-bottom-text {
-    text-align: center;
+    text-align: left;
     font-size: 1rem;
+    margin: 0 0 5% 5%;
+  }
+  .bottom1 {
+      display: none;
+  }
+  .para1{
+      display: none;
+  }
+  .para1-media-query{
+      display: flex;
+  }
+  .home-bottom-media{
+      display: block;
+      text-align: justify;
+      font-size: 1rem;
+      margin: 0 2% 7% 5%;
+      white-space: pre-line;
   }
 }
