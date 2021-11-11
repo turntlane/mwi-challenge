@@ -8,7 +8,7 @@ MWI Coding Challenge
 
 - Home Page
 ![Home Page](src/images/mwi1.png)
-- Instructions
+- Contact
 ![Contact](src/images/mwi2.png)
 
 ## Technologies
