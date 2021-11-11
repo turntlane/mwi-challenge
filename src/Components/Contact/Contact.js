@@ -1,9 +1,19 @@
-import React from 'react'
+import React, {useState} from 'react'
 import "./Contact.css";
 import { Link } from "react-router-dom";
 import logo from "../../images/mwi-logo.png";
 
+
 function Contact() {
+    const [firstName, setFirstName] = useState('');
+	const [lastName, setLastName] = useState('');
+	const [title, setTitle] = useState('');
+	const [email, setEmail] = useState('');
+	const [message, setMessage] = useState('');
+
+
+
+
     return (
         <div className='contact-container'>
             <section className='contact-left-side'>
